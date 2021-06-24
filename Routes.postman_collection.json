@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "8199fb17-b2b5-41c0-9cd3-c2474f5c0cae",
+		"name": "Routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"email@email.com\",\n    \"name\": \"name\",\n    \"dateOfBirth\": \"2000-02-18T15:10:40Z\",\n    \"marks\":[\n        {\n            \"subjectId\":\"CS103\",\n            \"subjectName\":\"Compiler\",\n            \"marks\":100\n        },\n        {\n            \"subjectId\":\"ME103\",\n            \"subjectName\":\"Autocad\",\n            \"marks\":95\n        }\n        ],\n        \"address\":{\n            \"street1\":\"street1\",\n            \"street2\":\"street2\",\n            \"landmark\":\"landmark\",\n            \"city\":\"city\",\n            \"state\":\"state\",\n            \"country\":\"India\",\n            \"pinCode\":\"CAN103\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/student/create-student-record",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"student",
+						"create-student-record"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student Marks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"student id OR email\",\n    \"marks\":[\n        {\n            \"subjectId\":\"subject id\",\n            \"subjectName\":\"subject name\",\n            \"marks\":90\n        }\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/student/update-student-marks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"student",
+						"update-student-marks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student Details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"student id OR email\",\n    \"email\": \"email@email.com\",\n    \"name\": \"name\",\n    \"dateOfBirth\": \"1995-02-18T15:10:40Z\",\n    \"marks\":[\n        {\n            \"subjectId\":\"CS103\",\n            \"subjectName\":\"Compiler\",\n            \"marks\":100\n        },\n        {\n            \"subjectId\":\"ME103\",\n            \"subjectName\":\"Autocad\",\n            \"marks\":95\n        }\n        ],\n        \"address\":{\n            \"street1\":\"street1\",\n            \"street2\":\"street2\",\n            \"landmark\":\"landmark\",\n            \"city\":\"city\",\n            \"state\":\"state\",\n            \"country\":\"India\",\n            \"pinCode\":\"CAN103\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/student/update-student-details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"student",
+						"update-student-details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student Email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":\"student id OR email\",\n    \"email\": \"new email\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/student/update-student-email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"student",
+						"update-student-email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-address-value",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"emil@gmail.com\",\n    \"name\": \"Jagdish\",\n    \"dateOfBirth\": \"2021-02-18T15:10:40Z\",\n    \"marks\":[\n        {\n            \"subjectId\":\"CS103\",\n            \"subjectName\":\"Compiler\",\n            \"marks\":100\n        },\n        {\n            \"subjectId\":\"ME103\",\n            \"subjectName\":\"Autocad\",\n            \"marks\":95\n        }\n        ],\n        \"address\":{\n            \"street1\":\"street1\",\n            \"street2\":\"street2\",\n            \"landmark\":\"landmark\",\n            \"city\":\"city\",\n            \"state\":\"state\",\n            \"country\":\"India\",\n            \"pinCode\":\"CAN103\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/student/get-address-value?id=student id OR email&key=key of json i.e. address column",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"student",
+						"get-address-value"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "student id OR email"
+						},
+						{
+							"key": "key",
+							"value": "key of json i.e. address column"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-subject-marks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"emil@gmail.com\",\n    \"name\": \"Jagdish\",\n    \"dateOfBirth\": \"2021-02-18T15:10:40Z\",\n    \"marks\":[\n        {\n            \"subjectId\":\"CS103\",\n            \"subjectName\":\"Compiler\",\n            \"marks\":100\n        },\n        {\n            \"subjectId\":\"ME103\",\n            \"subjectName\":\"Autocad\",\n            \"marks\":95\n        }\n        ],\n        \"address\":{\n            \"street1\":\"street1\",\n            \"street2\":\"street2\",\n            \"landmark\":\"landmark\",\n            \"city\":\"city\",\n            \"state\":\"state\",\n            \"country\":\"India\",\n            \"pinCode\":\"CAN103\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/student/get-subject-marks?id=student id OR email&subject=subject id OR subject name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"student",
+						"get-subject-marks"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "student id OR email"
+						},
+						{
+							"key": "subject",
+							"value": "subject id OR subject name"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-student-addess",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"emil@gmail.com\",\n    \"name\": \"Jagdish\",\n    \"dateOfBirth\": \"2021-02-18T15:10:40Z\",\n    \"marks\":[\n        {\n            \"subjectId\":\"CS103\",\n            \"subjectName\":\"Compiler\",\n            \"marks\":100\n        },\n        {\n            \"subjectId\":\"ME103\",\n            \"subjectName\":\"Autocad\",\n            \"marks\":95\n        }\n        ],\n        \"address\":{\n            \"street1\":\"street1\",\n            \"street2\":\"street2\",\n            \"landmark\":\"landmark\",\n            \"city\":\"city\",\n            \"state\":\"state\",\n            \"country\":\"India\",\n            \"pinCode\":\"CAN103\"\n        }\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/student/get-student-address?id=student id OR email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"student",
+						"get-student-address"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "student id OR email"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check Connection",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6000/student/check-connection",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"student",
+						"check-connection"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
