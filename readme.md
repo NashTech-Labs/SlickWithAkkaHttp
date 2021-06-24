@@ -186,7 +186,7 @@ subject = subject id OR subject name
 Request: GET <- localhost:6000/student/get-student-address?id=
 id = student id OR email
 ````
-######Note:
+###### Note:
 ###### Check out StudentsDAO class under src/main/scala/com/knoldus/template/persistence/components for more detailed info about used slick queries.
 ##### A number of samples is given in test files in packages:
 * actor
